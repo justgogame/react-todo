@@ -27,12 +27,11 @@ function App() {
         {todoList.map(function(el) {
           return (
             <li key = {el.id}>{el.title}</li>
-          )
-        })
-        }
+          );
+        })}
       </ul>
     </div>
-  )
+  );
 }
 
 export default App;
