@@ -20,6 +20,7 @@ const todoList = [
 
 function App() {
   return(
+
     <div>
       <h1>Todo List</h1>
       
@@ -27,12 +28,11 @@ function App() {
         {todoList.map(function(el) {
           return (
             <li key = {el.id}>{el.title}</li>
-          )
-        })
-        }
+          );
+        })}
       </ul>
     </div>
-  )
+  );
 }
 
 export default App;
