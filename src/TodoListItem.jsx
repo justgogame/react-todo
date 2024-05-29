@@ -1,8 +1,18 @@
-const TodoListItem = ({todo}) => {
+import React from "react";
 
-    return(
-        <li>{todo.title}</li>
-    );
-}
+const TodoListItem = ({ todo, onRemoveTodo }) => {
+  const handleOnRemove = () => {
+    onRemoveTodo(todo.id);
+  };
+
+  return (
+    <li>
+      {todo.title}
+      <button type="button" onClick={handleOnRemove}>
+        Remove
+      </button>
+    </li>
+  );
+};
 
 export default TodoListItem;
