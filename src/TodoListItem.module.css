@@ -1,0 +1,54 @@
+body{
+    background: linear-gradient(to left, #b6fbff, #2f322f);
+    color: goldenrod;
+    font-family: "REM", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    padding-left: 3em;
+}
+
+form{
+    display:flex;
+}
+
+label{
+    padding: 3px 5px 0 0;
+}
+
+form > button {
+    background-color: #719c9e;
+    box-shadow: 1px 3px 5px 1px rgba(84, 90, 84, 0.5);
+    color:#2f322f;
+    padding: 0.2em;
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+ul {
+    padding: 0;
+}
+
+li > span > button {
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+span:nth-child(odd) {
+    padding-top: 10px;
+}
+span:nth-child(even) {
+    padding-left: 10px;
+}
+
+.listItem {
+    color:burlywood;
+    display: flex;
+    justify-content: space-between;
+    list-style: square;
+}
+
+img{
+    width: 2.5em;
+
+}

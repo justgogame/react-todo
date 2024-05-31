@@ -1,4 +1,7 @@
 import React from "react";
+import styles from "./TodoListItem.module.css";
+import check from "./assets/check.svg"
+
 
 const TodoListItem = ({ todo, onRemoveTodo }) => {
   const handleOnRemove = () => {
@@ -6,11 +9,18 @@ const TodoListItem = ({ todo, onRemoveTodo }) => {
   };
 
   return (
-    <li>
-      {todo.title}
-      <button type="button" onClick={handleOnRemove}>
-        Remove
-      </button>
+    <li className={styles.listItem}>
+       <span>
+          {todo.title}
+      </span>
+      <span>
+        <button 
+          type="button" 
+          onClick={handleOnRemove}
+        >
+          <img src={check} className={styles.checkLogo} alt="Check logo" />
+        </button>
+      </span>
     </li>
   );
 };
