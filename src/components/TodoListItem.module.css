@@ -9,6 +9,7 @@ body{
 
 form{
     display:flex;
+    margin-top: 5%;
 }
 
 label{
@@ -51,4 +52,13 @@ span:nth-child(even) {
 img{
     width: 2.5em;
 
+}
+
+.sortButton{
+    background-color: #719c9e;
+    box-shadow: 1px 3px 5px 1px rgba(84, 90, 84, 0.5);
+    color:#2f322f;
+    padding: 0.2em;
+    font-size: 1.2em;
+    margin-top: 5%;
 }
