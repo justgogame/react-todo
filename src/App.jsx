@@ -10,7 +10,7 @@ const App = () => (
         <>
           <h1>Todo List</h1>
           <hr />
-          <TodoContainer />
+          <TodoContainer tableName = {import.meta.env.VITE_TABLE_NAME}/>
         </>
       }/>
       <Route path='/new' element={

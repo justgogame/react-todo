@@ -62,3 +62,8 @@ img{
     font-size: 1.2em;
     margin-top: 5%;
 }
+
+.tableName{
+    margin-left: 25%;
+    color:rgb(227, 191, 144);
+}

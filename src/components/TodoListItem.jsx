@@ -28,7 +28,7 @@ const TodoListItem = ({ todo, onRemoveTodo }) => {
 
 TodoListItem.propTypes = {
   todoLtodoist: PropTypes.string,
-  onRemoveTodo: PropTypes.func
+  onRemoveTodo: PropTypes.func.isRequired
 }
 
 export default TodoListItem;

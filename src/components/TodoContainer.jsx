@@ -2,19 +2,20 @@ import React from 'react';
 import TodoList from "./TodoList";
 import AddTodoForm from "./AddTodoForm";
 import styles from "./TodoListItem.module.css";
+import PropTypes from "prop-types";
 
 
 const url = `https://api.airtable.com/v0/${import.meta.env.VITE_AIRTABLE_BASE_ID}/${import.meta.env.VITE_TABLE_NAME}`;
 const authorization = `Bearer ${import.meta.env.VITE_AIRTABLE_API_TOKEN}`;
 
-const TodoContainer = () => {
+const TodoContainer = ( {tableName} ) => {
     const [todoList, setTodoList] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
     const [sortOrder, setSortOrder] = React.useState('asc');
 
     React.useEffect(() => {
         fetchData();
-    }, [sortOrder]); 
+    }, [tableName, sortOrder]); 
 
     const fetchData = async () => {
     const options = {
@@ -89,8 +90,8 @@ const TodoContainer = () => {
     }
     };
 
-    const addTodo = (newTodo) => {
-    postTodo(newTodo.title);
+    const addTodo = ({title}) => {
+    postTodo(title);
     };
 
     const removeTodo = async (id) => {
@@ -120,6 +121,7 @@ const TodoContainer = () => {
 
   return (
         <>
+            <h1 className={styles.tableName}>{tableName}</h1>
             <AddTodoForm onAddTodo={addTodo} />
             <button onClick={toggleSortOrder} className={styles.sortButton}>Sort Order</button>
             {isLoading ? (
@@ -129,6 +131,10 @@ const TodoContainer = () => {
             )}
         </>
   );
+}
+
+TodoContainer.propTypes = {
+  tableName: PropTypes.string.isRequired
 }
 
 export default TodoContainer;

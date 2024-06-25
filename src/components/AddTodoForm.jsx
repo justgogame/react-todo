@@ -7,8 +7,7 @@ const AddTodoForm = ({ onAddTodo }) => {
   const [todoTitle, setTodoTitle] = React.useState('');
 
   const handleTitleChange = (event) => {
-    const newTodoTitle = event.target.value;
-    setTodoTitle(newTodoTitle);
+    setTodoTitle(event.target.value);
   };
 
   const handleAddTodo = (event) => {
@@ -33,7 +32,7 @@ const AddTodoForm = ({ onAddTodo }) => {
 };
 
 AddTodoForm.propTypes = {
-  onAddTodo: PropTypes.func
+  onAddTodo: PropTypes.func.isRequired
 }
 
 export default AddTodoForm;

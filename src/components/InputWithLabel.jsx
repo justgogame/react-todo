@@ -27,9 +27,9 @@ const InputWithLabel = ({ id, todoTitle, handleTitleChange, children }) => {
 
 InputWithLabel.propTypes = {
   id: PropTypes.number,
-  todoTitle: PropTypes.string, 
-  handleTitleChange: PropTypes.func,
-  children: PropTypes.string
+  todoTitle: PropTypes.string.isRequired, 
+  handleTitleChange: PropTypes.func.isRequired,
+  children: PropTypes.string.isRequired
 }
 
 export default InputWithLabel;
