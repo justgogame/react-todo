@@ -1,8 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const InputWithLabel = ({ id, todoTitle, handleTitleChange, children }) => {
-
   const inputRef = React.useRef();
 
   React.useEffect(() => {
@@ -14,7 +13,7 @@ const InputWithLabel = ({ id, todoTitle, handleTitleChange, children }) => {
       <label htmlFor="todoTitle">{children}</label>
       <br />
       <input
-        id= {id}
+        id={id}
         type="text"
         name="title"
         value={todoTitle}
@@ -27,9 +26,9 @@ const InputWithLabel = ({ id, todoTitle, handleTitleChange, children }) => {
 
 InputWithLabel.propTypes = {
   id: PropTypes.number,
-  todoTitle: PropTypes.string.isRequired, 
+  todoTitle: PropTypes.string.isRequired,
   handleTitleChange: PropTypes.func.isRequired,
-  children: PropTypes.string.isRequired
-}
+  children: PropTypes.string.isRequired,
+};
 
 export default InputWithLabel;
